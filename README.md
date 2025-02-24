@@ -1,4 +1,6 @@
 # Домашнее задание к занятию "8. EventSource, Websockets"
+https://render.com/docs/cli
+https://js-3-hw-08-ws-chat.onrender.com
 
 Правила сдачи задания:
 
