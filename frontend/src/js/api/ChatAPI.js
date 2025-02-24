@@ -5,7 +5,10 @@ import createRequest from './createRequest';
 export default class ChatAPI extends Entity {
   constructor() {
     //super('/api');
-    super('http://localhost:3000/api');
+    // super('http://localhost:3000/api');
+
+    // Заменяем localhost на URL сервера на Render
+    super('https://js-3-hw-08-ws-chat.onrender.com/api');
     this.user = null;
   }
 
