@@ -1,4 +1,3 @@
-// ChatAPI.js
 // Класс для работы с API чата
 import Entity from './Entity';
 import createRequest from './createRequest';

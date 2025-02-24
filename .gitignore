@@ -2,6 +2,7 @@ dist
 doc
 dist/
 doc/
+public/
 
 # Logs
 logs

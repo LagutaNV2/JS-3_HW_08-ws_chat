@@ -1,4 +1,3 @@
-// Chat.js
 // Основной класс чата
 import ChatAPI from './api/ChatAPI';
 
@@ -106,7 +105,8 @@ export default class Chat {
 
   subscribeOnEvents() {
     console.log('Устанавливаем WebSocket-соединение...');
-    this.websocket = new WebSocket('ws://localhost:3000');
+    // this.websocket = new WebSocket('ws://localhost:3000');
+    this.websocket = new WebSocket('wss://js-3-hw-08-ws-chat.onrender.com');
 
     this.websocket.onopen = () => {
       console.log('WebSocket connection established');

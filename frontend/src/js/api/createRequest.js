@@ -1,4 +1,3 @@
-// createRquest.js
 // Утилита для создания HTTP-запросов
 
 const createRequest = async (options) => {
