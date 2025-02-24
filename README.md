@@ -1,7 +1,7 @@
 # Домашнее задание к занятию "8. EventSource, Websockets"
 server: https://js-3-hw-08-ws-chat.onrender.com
 
-link:
+link: https://lagutanv2.github.io/JS-3_HW_08-ws_chat/
 
 CI: [![Build status](https://ci.appveyor.com/api/projects/status/jf3c17fj1t75q2mo?svg=true)](https://ci.appveyor.com/project/LagutaNV2/js-3-hw-08-ws-chat)
 
