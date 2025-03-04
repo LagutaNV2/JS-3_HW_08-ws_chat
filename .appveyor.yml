@@ -22,11 +22,12 @@ deploy_script:
   - git config --global credential.helper store
   - git config --global user.name AppVeyor
   - git config --global user.email ci@appveyor.com
-  - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "$HOME/.git-credentials"
+  # - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "$HOME/.git-credentials"
+  - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "C:\Users\appveyor\.git-credentials"
   - echo "GITHUB_TOKEN is set: $GITHUB_TOKEN"
   - dir # Вывод содержимого текущей директории
-  # - npx gh-pages -d dist -u "appveyor-bot <ci@appveyor>"
-  - npx gh-pages -d dist -u "appveyor-bot <ci@appveyor>" --no-push
+  - npx gh-pages -d dist -u "appveyor-bot <ci@appveyor>"
+  # - npx gh-pages -d dist -u "appveyor-bot <ci@appveyor>" --no-push
 
   # - npx gh-pages -d frontend/dist -u "appveyor-bot <ci@appveyor>"
   # - cd frontend
