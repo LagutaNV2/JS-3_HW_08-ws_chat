@@ -8,4 +8,8 @@ module.exports = merge(common, {
     minimize: true,
     minimizer: [new TerserPlugin({})],
   },
+  output: { // Настройка выходного файла
+    path: path.resolve(__dirname, "../dist"), // Путь относительно корня проекта
+    filename: "main.js",
+  },
 });
