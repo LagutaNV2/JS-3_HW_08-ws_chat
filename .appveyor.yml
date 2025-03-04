@@ -29,8 +29,9 @@ deploy_script:
   # - npx gh-pages -d dist -u "AppVeyor Bot <ci@appveyor.com>"
   # Явно указываем путь к папке dist внутри frontend
   # - npx gh-pages -d frontend/dist -u "appveyor-bot <ci@appveyor>"
-  - if exist frontend\dist (
-      cd frontend && npx gh-pages -d dist -u "appveyor-bot <ci@appveyor>"
-    ) else (
-      echo "Error: 'dist' folder not found"
-    )
+  - cmd: >
+      if exist frontend\dist (
+        cd frontend && npx gh-pages -d dist -u "appveyor-bot <ci@appveyor>"
+      ) else (
+        echo "Error: 'dist' folder not found"
+      )
