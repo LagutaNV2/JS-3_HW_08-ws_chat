@@ -18,15 +18,7 @@ build_script:
   - npm run build
 
 # Публикация на GitHub Pages
-
-# deploy:
-#   provider: GitHub
-#   auth_token:
-#     secure: YOUR_ENCRYPTED_GITHUB_TOKEN # токен
-#   artifact: dist # Папка с результатами сборки
-#   on:
-#     branch: main # Ветка, из которой происходит деплой
-deploy_script:  # скрипт развёртывания
+deploy_script:
   - git config --global credential.helper store
   - git config --global user.name AppVeyor
   - git config --global user.email ci@appveyor.com
@@ -36,4 +28,9 @@ deploy_script:  # скрипт развёртывания
   # Деплой через gh-pages
   # - npx gh-pages -d dist -u "AppVeyor Bot <ci@appveyor.com>"
   # Явно указываем путь к папке dist внутри frontend
-  - npx gh-pages -d frontend/dist -u "appveyor-bot <ci@appveyor>"
+  # - npx gh-pages -d frontend/dist -u "appveyor-bot <ci@appveyor>"
+  - if exist frontend\dist (
+      cd frontend && npx gh-pages -d dist -u "appveyor-bot <ci@appveyor>"
+    ) else (
+      echo "Error: 'dist' folder not found"
+    )
