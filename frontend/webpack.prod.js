@@ -11,7 +11,7 @@ module.exports = merge(common, {
   },
   output: { // Настройка выходного файла
     // path: path.resolve(__dirname, "../dist"), // Путь относительно корня проекта
-    path: path.resolve(__dirname, 'dist'), // внутри frontend
+    path: path.resolve(__dirname, "dist"), // внутри frontend
     filename: "main.js",
   },
 });
