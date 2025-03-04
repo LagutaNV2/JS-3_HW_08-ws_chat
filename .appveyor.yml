@@ -1,8 +1,9 @@
 version: 1.0.{build}
+image: Visual Studio 2022
 
 # Настройка среды
 environment:
-  nodejs_version: "20"
+  nodejs_version: "20.17.0
 
 # Установка зависимостей
 install:
@@ -13,7 +14,6 @@ install:
 
 # Сборка проекта
 build_script:
-  # - cd frontend
   - npm run build
 
 # Публикация на GitHub Pages
@@ -25,16 +25,20 @@ build_script:
 #   artifact: dist # Папка с результатами сборки
 #   on:
 #     branch: main # Ветка, из которой происходит деплой
-deploy_script:  # скрипт развёртывания
+# deploy_script:  # скрипт развёртывания
+on_success:
   - git config --global credential.helper store
-  - git config --global user.name AppVeyor
+  # - git config --global user.name AppVeyor
+  - git config --global user.name "AppVeyor Bot"
   - git config --global user.email ci@appveyor.com
   - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "$HOME/.git-credentials"
   # - cd frontend && npx gh-pages -d dist
   # - npx gh-pages -d dist -u "appveyor-bot <ci@appveyor>"
   # Деплой через gh-pages
-  - npx gh-pages -d dist -u "AppVeyor Bot <ci@appveyor.com>"
-
+  # - npx gh-pages -d dist -u "AppVeyor Bot <ci@appveyor.com>"
+  # Явно указываем путь к папке dist внутри frontend
+  - npx gh-pages -d frontend/dist -u "AppVeyor Bot <ci@appveyor.com>"
+  
 # only_commits:
 #   paths:
 #     - frontend/**
