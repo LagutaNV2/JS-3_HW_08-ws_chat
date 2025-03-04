@@ -9,6 +9,7 @@ install:
   - ps: Install-Product node $env:nodejs_version
   - cd frontend # Переходим в папку frontend
   - npm install
+  - npm install gh-pages --save-dev # Локальная установка gh-pages
 
 # Сборка проекта
 build_script:
@@ -30,8 +31,9 @@ deploy_script:  # скрипт развёртывания
   - git config --global user.email ci@appveyor.com
   - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "$HOME/.git-credentials"
   # - cd frontend && npx gh-pages -d dist
-  - npx gh-pages -d dist -u "appveyor-bot <ci@appveyor>"
-
+  # - npx gh-pages -d dist -u "appveyor-bot <ci@appveyor>"
+  # Деплой через gh-pages
+  - npx gh-pages -d dist -u "AppVeyor Bot <ci@appveyor.com>"
 
 # only_commits:
 #   paths:
