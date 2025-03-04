@@ -16,6 +16,7 @@ build_script:
   - npm run build
 
 # Публикация на GitHub Pages
+
 # deploy:
 #   provider: GitHub
 #   auth_token:
