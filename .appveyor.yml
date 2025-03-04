@@ -25,8 +25,8 @@ deploy_script:
   - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "$HOME/.git-credentials"
   # - npx gh-pages -d dist -u "AppVeyor Bot <ci@appveyor.com>"
   # - npx gh-pages -d frontend/dist -u "appveyor-bot <ci@appveyor>"
-  - cd frontend
-  - dir # Вывод содержимого папки frontend
+  # - cd frontend
+  
   - cmd: >
       if exist dist (
         npx gh-pages -d dist -u "appveyor-bot <ci@appveyor>"
