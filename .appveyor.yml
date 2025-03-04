@@ -1,4 +1,6 @@
 version: 1.0.{build}
+image: Visual Studio 2019
+stack: node 20
 
 # Настройка среды
 environment:
@@ -34,7 +36,7 @@ deploy_script:  # скрипт развёртывания
   # Деплой через gh-pages
   # - npx gh-pages -d dist -u "AppVeyor Bot <ci@appveyor.com>"
   # Явно указываем путь к папке dist внутри frontend
-  - npx gh-pages -d frontend/dist -u "AppVeyor Bot <ci@appveyor.com>"
+  - npx gh-pages -d frontend/dist -u "appveyor-bot <ci@appveyor>"
 
 # only_commits:
 #   paths:
