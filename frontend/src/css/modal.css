@@ -19,7 +19,7 @@
   border-radius: 5px;
   box-shadow: 0 3px 5px 2px rgba(0, 0, 0, .3);
   transition: all 0.3s ease-out;
-  transform: translateY(-100vh);
+  /* transform: translateY(-100vh); */
   z-index: 20;
 }
 
@@ -121,4 +121,3 @@
   text-align: center;
   font-size: 32px;
 }
-

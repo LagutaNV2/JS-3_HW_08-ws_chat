@@ -12,7 +12,7 @@ install:
 
 # Сборка проекта
 build_script:
-  - cd frontend # Переходим в папку frontend
+  # - cd frontend
   - npm run build
 
 # Публикация на GitHub Pages
