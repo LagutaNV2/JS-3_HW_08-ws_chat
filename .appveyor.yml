@@ -4,7 +4,7 @@ stack: node 20
 
 # Настройка среды
 environment:
-  nodejs_version: "20.17.0
+  nodejs_version: "20.17.0"
 
 # Установка зависимостей
 install:
@@ -37,7 +37,3 @@ deploy_script:  # скрипт развёртывания
   # - npx gh-pages -d dist -u "AppVeyor Bot <ci@appveyor.com>"
   # Явно указываем путь к папке dist внутри frontend
   - npx gh-pages -d frontend/dist -u "appveyor-bot <ci@appveyor>"
-
-# only_commits:
-#   paths:
-#     - frontend/**
