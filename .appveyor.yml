@@ -28,9 +28,8 @@ deploy_script:  # скрипт развёртывания
   - git config --global user.name AppVeyor
   - git config --global user.email ci@appveyor.com
   - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "$HOME/.git-credentials"
-  - if exist dist (npx gh-pages -d dist) else (echo "Error: 'dist' folder not found")
   # - cd frontend && npx gh-pages -d dist
-  # - npx gh-pages -d dist -u "appveyor-bot <ci@appveyor>"
+  - npx gh-pages -d dist -u "appveyor-bot <ci@appveyor>"
 
 
 # only_commits:
