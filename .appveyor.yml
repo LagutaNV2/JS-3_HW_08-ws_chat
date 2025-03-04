@@ -1,5 +1,4 @@
 version: 1.0.{build}
-image: Visual Studio 2022
 
 # Настройка среды
 environment:
@@ -25,8 +24,7 @@ build_script:
 #   artifact: dist # Папка с результатами сборки
 #   on:
 #     branch: main # Ветка, из которой происходит деплой
-# deploy_script:  # скрипт развёртывания
-on_success:
+deploy_script:  # скрипт развёртывания
   - git config --global credential.helper store
   - git config --global user.name AppVeyor
   - git config --global user.email ci@appveyor.com
