@@ -24,12 +24,7 @@ deploy_script:
   - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "C:\Users\appveyor\.git-credentials"
   - echo "GITHUB_TOKEN is set: $GITHUB_TOKEN"
   - dir # Вывод содержимого текущей директории
-  - cmd: >
-      if exist dist (
-        npx gh-pages -d dist -u "appveyor-bot <ci@appveyor>"
-      ) else (
-        echo "Error: 'dist' folder not found"
-      )
+  - npx gh-pages -d dist -u "appveyor-bot <ci@appveyor>
   # - npx gh-pages -d dist -u "appveyor-bot <ci@appveyor>" --no-push
 
   # - npx gh-pages -d frontend/dist -u "appveyor-bot <ci@appveyor>"
